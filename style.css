@@ -18,8 +18,6 @@ body, html {
     align-items: center;
     height: 100%;
     flex-direction: column;
-    text-align: center;
-    padding: 10px;
 }
 
 .page.active {
@@ -27,25 +25,22 @@ body, html {
 }
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 /* First Page Styles */
 .welcome h1 {
     color: #e60073;
     margin-bottom: 20px;
-    font-size: 2rem;
-    padding: 0 10px;
 }
 
 .welcome button {
-    padding: 12px 24px;
+    padding: 10px 20px;
     background-color: #e60073;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2rem;
     transition: transform 0.3s;
 }
 
@@ -57,18 +52,17 @@ body, html {
 .puzzle h2 {
     color: #cc0066;
     margin-bottom: 10px;
-    font-size: 1.8rem;
 }
 
 .puzzle .subtext {
     color: #99004d;
     margin-bottom: 20px;
-    font-size: 1rem;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -94,33 +88,6 @@ body, html {
 .box.selected {
     background-color: #e60073;
     color: #fff;
-}
-
-/* Congratulations Message */
-.congratulations {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.congratulations p {
-    font-size: 1.2rem;
-    color: #e60073;
-    margin-bottom: 10px;
-}
-
-.gift-button {
-    padding: 10px 20px;
-    background-color: #e60073;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.gift-button:hover {
-    transform: scale(1.1);
 }
 
 /* Animation Page Styles */
@@ -248,38 +215,74 @@ body, html {
     100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
 }
 
-/* Responsive Styles */
+/* Congratulations Message */
+.congratulations {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.congratulations p {
+    font-size: 1.2rem;
+    color: #e60073;
+    margin-bottom: 10px;
+}
+
+.gift-button {
+    padding: 10px 20px;
+    background-color: #e60073;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gift-button:hover {
+    transform: scale(1.1);
+}
+
+/* Existing styles above */
+
+/* Mobile-friendly styles */
 @media (max-width: 768px) {
+    body, html {
+        font-size: 14px;
+    }
+
     .welcome h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .welcome button {
         font-size: 1rem;
-        padding: 10px 20px;
+        padding: 8px 16px;
     }
 
     .puzzle h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
-    .puzzle .subtext {
+    .subtext {
         font-size: 0.9rem;
     }
 
     .grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
         gap: 8px;
     }
 
     .box {
-        width: 80px;
+        width: 90px;
         height: 50px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        padding: 10px;
     }
 
     .congratulations p {
         font-size: 1rem;
+        margin-bottom: 8px;
     }
 
     .gift-button {
@@ -287,12 +290,18 @@ body, html {
         padding: 8px 14px;
     }
 
+    .animation-container {
+        text-align: center;
+    }
+
+    .cat {
+        width: 80px;
+        height: auto;
+        margin-bottom: 16px;
+    }
+
     .message-text {
         font-size: 1rem;
         padding: 15px;
-    }
-
-    .cat-body {
-        width: 80px;
     }
 }
