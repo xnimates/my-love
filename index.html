@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- First Page -->
+    <div class="page active" id="page1">
+        <div class="welcome">
+            <h1>Hi... saya ade something ni hehe 🎁</h1>
+            <button onclick="startPuzzle()">Try click sini (Khas untuk Liza)</button>
+        </div>
+    </div>
+
+    <!-- Second Page -->
+    <div class="page hidden" id="page2">
+        <div class="puzzle">
+            <h2>Cuba teka mana tempat kita pernah pergi?</h2>
+            <p class="subtext">Kalau masih busy takpe, next time after free boleh try ya!</p>
+            <div class="grid">
+		<div id="congratsMessage" class="congratulations hidden">
+    <p>Tahniah!! semua betol. Nah ambik laa gift ni!</p>
+    <button onclick="showAnimation()" class="gift-button">🎁 Open Gift 🎁</button>
+</div>
+
+                <div class="box" data-number="1">1. Aquarium</div>
+                <div class="box" data-number="2">2. Zoo</div>
+                <div class="box" data-number="3">3. Cat Cafe</div>
+                <div class="box" data-number="4">4. Muzium Telekom</div>
+                <div class="box" data-number="5">5. MyKart Raceway</div>
+                <div class="box" data-number="6">6. Petrosains</div>
+                <div class="box" data-number="7">7. Happy Hour Club</div>
+                <div class="box" data-number="8">8. Skyline Luge</div>
+                <div class="box" data-number="9">9. SplashMania</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animation and Message Page -->
+    <div class="page hidden" id="page3">
+        <div class="animation-container">
+            <div class="cat">
+                <div class="cat-body">
+                    <div class="cat-ear left-ear"></div>
+                    <div class="cat-ear right-ear"></div>
+                    <div class="cat-face">
+                        <div class="cat-eye left-eye"></div>
+                        <div class="cat-eye right-eye"></div>
+                        <div class="cat-nose"></div>
+                        <div class="cat-mouth"></div>
+                        <div class="cat-whiskers left-whiskers"></div>
+                        <div class="cat-whiskers right-whiskers"></div>
+                    </div>
+                    <div class="cat-pocket"></div>
+                </div>
+            </div>
+            <div class="message-container hidden" id="messageContainer">
+                <p class="message-text">Hey love, just wanted to remind you that it's okay to take a little break and breathe. You've been working so hard, and I'm so proud of you. You've got this, and I’m here to help in any way I can. Remember, one step at a time and jangan lupe makan... —you can do it!! 🌸❤️💪</p>
+            </div>
+            <div id="partyPoppers"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

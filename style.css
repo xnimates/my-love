@@ -1,0 +1,243 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f2;
+    overflow: hidden;
+}
+
+.page {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.page.active {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+/* First Page Styles */
+.welcome h1 {
+    color: #e60073;
+    margin-bottom: 20px;
+}
+
+.welcome button {
+    padding: 10px 20px;
+    background-color: #e60073;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.welcome button:hover {
+    transform: scale(1.1);
+}
+
+/* Puzzle Page Styles */
+.puzzle h2 {
+    color: #cc0066;
+    margin-bottom: 10px;
+}
+
+.puzzle .subtext {
+    color: #99004d;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box {
+    width: 100px;
+    height: 60px;
+    background-color: #ffb3d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #660033;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background-color: #ff99cc;
+}
+
+.box.selected {
+    background-color: #e60073;
+    color: #fff;
+}
+
+/* Animation Page Styles */
+.animation-container {
+    position: relative;
+    text-align: center;
+}
+
+.cat {
+    position: relative;
+    margin-bottom: 20px;
+    animation: peek 2s ease-in-out infinite alternate;
+}
+
+@keyframes peek {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(-10px); }
+}
+
+.cat-body {
+    width: 100px;
+    height: 120px;
+    background-color: #ffcce6;
+    border-radius: 50px 50px 30px 30px;
+    position: relative;
+}
+
+.cat-ear {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ffcce6;
+    border-radius: 50%;
+    top: -15px;
+}
+
+.left-ear { left: 10px; transform: rotate(-20deg); }
+.right-ear { right: 10px; transform: rotate(20deg); }
+
+.cat-face {
+    position: relative;
+    top: 20px;
+}
+
+.cat-eye { width: 10px; height: 10px; background: #660033; border-radius: 50%; display: inline-block; }
+.left-eye { margin-right: 10px; }
+.right-eye { margin-left: 10px; }
+
+.cat-nose { width: 12px; height: 12px; background: #660033; border-radius: 50%; margin: 5px auto; }
+.cat-mouth { width: 15px; height: 5px; background: #660033; border-radius: 0 0 10px 10px; margin: 5px auto; }
+
+.cat-pocket {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 40px;
+    background-color: #ff99cc;
+    border-radius: 0 0 30px 30px;
+}
+
+/* Message Container */
+.message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.message-text {
+    font-size: 1.2rem;
+    color: #e60073;
+    background-color: #fff7fa;
+    padding: 20px;
+    border-radius: 10px;
+    animation: zoomIn 2s forwards;
+    transform: scale(0);
+    opacity: 0;
+    margin: 20px;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Party Popper Animation */
+#partyPoppers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#partyPoppers::before, #partyPoppers::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background: #ff66b2;
+    border-radius: 50%;
+    animation: fall 3s infinite linear;
+}
+
+#partyPoppers::before {
+    left: 25%;
+    animation-delay: 0.2s;
+}
+
+#partyPoppers::after {
+    left: 75%;
+    background: #ff99cc;
+    animation-delay: 0.5s;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
+}
+
+/* Congratulations Message */
+.congratulations {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.congratulations p {
+    font-size: 1.2rem;
+    color: #e60073;
+    margin-bottom: 10px;
+}
+
+.gift-button {
+    padding: 10px 20px;
+    background-color: #e60073;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gift-button:hover {
+    transform: scale(1.1);
+}
