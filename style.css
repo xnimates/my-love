@@ -241,3 +241,67 @@ body, html {
 .gift-button:hover {
     transform: scale(1.1);
 }
+
+/* Existing styles above */
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+    body, html {
+        font-size: 14px;
+    }
+
+    .welcome h1 {
+        font-size: 1.4rem;
+    }
+
+    .welcome button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .puzzle h2 {
+        font-size: 1.2rem;
+    }
+
+    .subtext {
+        font-size: 0.9rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 8px;
+    }
+
+    .box {
+        width: 90px;
+        height: 50px;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .congratulations p {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .gift-button {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+
+    .animation-container {
+        text-align: center;
+    }
+
+    .cat {
+        width: 80px;
+        height: auto;
+        margin-bottom: 16px;
+    }
+
+    .message-text {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
